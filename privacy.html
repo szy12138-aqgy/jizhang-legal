@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>隐私政策 · 迹账</title>
+<style>  :root { --brand: #1f7a6b; --text: #1b1f1e; --muted: #6b7a77; --bg: #f7faf9; --card: #ffffff; --line: #e3ebe9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+         line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 72px; }
+  header { padding: 8px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+  .brand { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: var(--brand); font-weight: 700; text-decoration: none; }
+  .logo { width: 26px; height: 26px; border-radius: 8px; background: #b7a6f3; display: inline-flex; align-items: center; justify-content: center; color: #2a2440; font-weight: 800; font-size: 14px; }
+  h1 { font-size: 24px; margin: 16px 0 6px; letter-spacing: .3px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  h2 { font-size: 17px; margin: 30px 0 8px; padding-left: 10px; border-left: 3px solid var(--brand); }
+  p, li { font-size: 15px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin: 16px 0; }
+  .card h2 { margin-top: 0; }
+  a { color: var(--brand); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  .links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./index.html"><span class="logo">¥</span>迹账</a>
+    <h1>迹账 · 隐私政策</h1>
+    <div class="meta">更新日期：2026 年 10 月 31 日　生效日期：2026 年 10 月 31 日</div>
+  </header>
+  <div class="card">
+  <h2>一、引言</h2>
+  <p>「迹账」是一款记账工具。我们遵循「数据最小化」原则：<strong>不登录也能完整记账</strong>，你的账本默认只保存在你自己的手机上。</p>
+  <p>本政策说明在什么情况下我们会处理你的哪些信息、用途是什么、以及你可以如何管理这些信息。</p>
+</div>
+
+<h2>二、我们处理哪些信息</h2>
+<ul>
+  <li><strong>游客状态（默认）</strong>：不收集任何个人信息。账本、分类、账单、转账全部保存在本机数据库。</li>
+  <li><strong>登录之后（可选）</strong>：为了登录与多设备同步，我们会处理你的<strong>邮箱地址或手机号</strong>（二选一）、登录凭证，以及你自行设置的<strong>昵称与头像</strong>。</li>
+  <li><strong>验证码</strong>：登录时通过邮箱/短信下发的一次性验证码，仅用于本次验证，验证后即失效。</li>
+  <li>我们不收集：身份证号、精确位置、通讯录、短信内容、相册照片、应用列表、设备唯一标识。</li>
+  <li>我们不投放广告，不接入任何广告或统计分析 SDK。</li>
+</ul>
+
+<h2>三、数据保存在哪里</h2>
+<ul>
+  <li><strong>本地</strong>：账本数据保存在系统分配给迹账的私有目录（SQLite 数据库），其它应用无法访问。</li>
+  <li><strong>你导出的文件</strong>：备份文件（.json）与账单（.xlsx）只会保存到你通过系统文件选择器指定的位置，或分享给你选择的应用。这些文件之后的安全由你自行保管。</li>
+  <li><strong>云端（如你主动使用同步）</strong>：仅在登录并开启同步后，账单数据才会上传到服务器，传输过程使用 HTTPS 加密；你可以随时在「备份与恢复」中关闭或删除。</li>
+  <li>如果你在系统设置中开启了系统级云备份，操作系统可能把应用数据一并纳入备份，这属于系统行为，可在系统设置中关闭。</li>
+</ul>
+
+<h2>四、设备权限说明</h2>
+<ul>
+  <li><strong>文件读取</strong>：仅在你主动导入账单或恢复备份时，通过系统文件选择器读取你选中的文件。</li>
+  <li><strong>生物识别</strong>：用于「应用锁」，指纹/面容校验由操作系统完成，迹账不会接触也不会保存你的生物特征数据。</li>
+  <li>迹账不申请位置、通讯录、短信、通话记录、相机、麦克风、存储写入等权限。</li>
+</ul>
+
+<h2>五、第三方组件</h2>
+<p>为实现本地功能，迹账使用以下开源组件，它们均只在你的设备上运行，不涉及数据上传：</p>
+<ul>
+  <li>sqflite（本地数据库）、shared_preferences（本地偏好设置）、path_provider（本地路径）</li>
+  <li>share_plus（系统分享）、file_selector（系统文件选择）、charset_converter（账单编码转换）</li>
+  <li>local_auth（系统生物识别）</li>
+</ul>
+<p>如后续接入微信登录，我们会在此处补充「微信开放平台 SDK」及其收集的信息类型，并在应用内再次征求你的同意。</p>
+
+<h2>六、你的权利</h2>
+<ul>
+  <li><strong>查看与修改</strong>：随时在应用内查看、编辑你的账单、账本与资料。</li>
+  <li><strong>导出</strong>：通过「我的 → 备份与恢复」导出全量备份，或「账单管理 → 账单导出」导出 Excel。</li>
+  <li><strong>删除</strong>：可删除单条账单、清空全部账单；卸载应用后本机数据一并删除。</li>
+  <li><strong>注销账号</strong>：登录后可在「我的 → 账号与安全 → 注销账号」自助注销；注销后 7 天内重新登录可撤回，30 天后服务器数据彻底删除。</li>
+  <li><strong>撤回同意</strong>：卸载应用即可停止使用并终止本政策；重新安装后需再次同意。</li>
+</ul>
+
+<h2>七、未成年人保护</h2>
+<p>若你是未满 14 周岁的未成年人，请在监护人陪同下阅读本政策并使用迹账。我们不会主动收集未成年人的个人信息；如你使用登录功能，视为已获得监护人同意。</p>
+
+<h2>八、数据安全</h2>
+<p>本地数据依赖系统沙箱与应用锁保护；云端传输使用 HTTPS，服务端对密码类凭证做单向哈希存储。请妥善保管你的设备与账号，避免将备份文件分享给不可信的第三方。</p>
+
+<h2>九、政策更新</h2>
+<p>本政策发生重大变更时，我们会在应用内弹窗重新征求你的同意，并更新本页面的「更新日期」。</p>
+
+<h2>十、联系我们</h2>
+<p>对隐私政策有疑问，或需要行使上述权利，请邮件联系 <a href="mailto:18012936132@163.com">18012936132@163.com</a>。我们会在 15 个工作日内答复。</p>
+
+  <footer>
+    迹账 · 个人记账工具
+    <div class="links">
+      <a href="./privacy.html">隐私政策</a>
+      <a href="./terms.html">用户协议</a>
+      <a href="../">文档首页</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
